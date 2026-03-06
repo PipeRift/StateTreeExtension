@@ -7,7 +7,7 @@ State Tree Extension is a lightweight plugin that adds common missing features f
 
 If you like Piperift´s work, consider becoming a Patron. It will go a long way in helping us and our projects!
 
-[![patron](Docs/usage/img/patron_small.png)](https://www.patreon.com/join/piperift)
+[![patron](Resources/patron_small.png)](https://www.patreon.com/join/piperift)
 
 ## Features
 Keep in mind all features are related to state trees.
