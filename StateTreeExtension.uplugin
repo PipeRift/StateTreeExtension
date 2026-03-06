@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 10,
+	"VersionName": "0.1",
+	"FriendlyName": "State Tree Extension",
+	"Description": "Adds common missing features for State Trees",
+	"Category": "Piperift",
+	"CreatedBy": "Piperift",
+	"CreatedByURL": "http://piperift.com/",
+	"DocsURL": "https://piperift.com/StateTreeExtension",
+	"SupportURL": "info@piperift.com",
+	"EngineVersion": "5.7",
+	"CanContainContent": false,
+	"Modules": [
+		{
+			"Name": "StateTreeExtension",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "StateTreeExtensionEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "StateTree",
+			"Enabled": true
+		}
+	]
+}
