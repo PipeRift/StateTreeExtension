@@ -11,8 +11,8 @@ namespace UE::StateTree::DescHelpers
 		const FText& RightParamText, EStateTreeNodeFormatting Formatting)
 	{
 		const FText Format = (Formatting == EStateTreeNodeFormatting::RichText)
-								 ? LOCTEXT("TwoParamsFuncRich", "<s>{Function}</>({Left}, {Right})")
-								 : LOCTEXT("TwoParamsFunc", "{Function}({Left}, {Right})");
+							   ? LOCTEXT("TwoParamsFuncRich", "<s>{Function}</>({Left}, {Right})")
+							   : LOCTEXT("TwoParamsFunc", "{Function}({Left}, {Right})");
 
 		return FText::FormatNamed(Format, TEXT("Function"), FunctionText, TEXT("Left"), LeftParamText,
 			TEXT("Right"), RightParamText);
