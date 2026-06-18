@@ -9,7 +9,7 @@
 	"CreatedByURL": "http://piperift.com/",
 	"DocsURL": "https://piperift.com/StateTreeExtension",
 	"SupportURL": "info@piperift.com",
-	"EngineVersion": "5.7.0",
+	"EngineVersion": "5.8.0",
 	"CanContainContent": false,
 	"Modules": [
 		{
