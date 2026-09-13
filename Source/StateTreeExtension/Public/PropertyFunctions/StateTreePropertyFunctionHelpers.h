@@ -2,7 +2,6 @@
 #pragma once
 
 #include <GameplayTagContainer.h>
-#include <StateTreeNodeDescriptionHelpers.h>
 #include <StateTreePropertyFunctionBase.h>
 #include <StateTreePropertyRef.h>
 
@@ -57,3 +56,5 @@ namespace UE::StateTree::DescHelpers
 	}
 #endif	  // WITH_EDITOR
 }	 // namespace UE::StateTree::DescHelpers
+
+#include <StateTreeNodeDescriptionHelpers.h>
