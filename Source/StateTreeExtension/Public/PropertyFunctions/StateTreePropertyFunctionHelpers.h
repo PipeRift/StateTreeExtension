@@ -13,9 +13,24 @@ namespace UE::StateTree::DescHelpers
 		const FText& RightParamText, EStateTreeNodeFormatting Formatting);
 
 #if WITH_EDITOR
+	inline FText GetText(const FVector2D& Value, EStateTreeNodeFormatting Formatting)
+	{
+		return FText::FromString(Value.ToString());
+	}
+
+	inline FText GetText(const FIntVector& Value, EStateTreeNodeFormatting Formatting)
+	{
+		return FText::FromString(Value.ToString());
+	}
+
+	inline FText GetText(const FIntPoint& Value, EStateTreeNodeFormatting Formatting)
+	{
+		return FText::FromString(Value.ToString());
+	}
+
 	/** @return description in the form of OperationText(Left, Right).
-	 *	Expect TInstanceDataType to have a member Left and Right whose types have an overloaded
-	 *UE::StateTree::DescHelpers::GetText function.
+	 * Expect TInstanceDataType to have a member Left and Right whose types have an overloaded
+	 * UE::StateTree::DescHelpers::GetText function.
 	 */
 	template <typename TInstanceDataType>
 	FText GetDescriptionForTwoParametersFunc(FText OperationText, const FGuid& ID,
