@@ -9,6 +9,7 @@ public class StateTreeExtension : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] {
+			"AIModule",
 			"Core",
 			"CoreUObject",
 			"Engine",

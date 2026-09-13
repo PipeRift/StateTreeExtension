@@ -17,12 +17,14 @@ Keep in mind all features are related to state trees.
   - Remove Tag
 - Property Functions
   - Vectors
-    - Add
-    - Subtract
-    - Distance
-    - Distance Squared
+    - Add: FVector, FVector2D, FIntVector & FIntPoint
+    - Subtract: FVector, FVector2D, FIntVector & FIntPoint
+    - Distance: FVector, FVector2D, FIntVector & FIntPoint
+    - Distance Squared: FVector, FVector2D, FIntVector & FIntPoint
   - Gameplay Tags
     - Has Tag
     - Has Any Tags
     - Has All Tags
     - Matches Query
+- Conditions
+  - Distance Compare: FVector2D, FIntVector & FIntPoint. (FVector already supported by the engine)
