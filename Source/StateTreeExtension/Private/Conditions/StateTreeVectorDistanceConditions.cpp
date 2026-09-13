@@ -2,8 +2,8 @@
 
 #include "Conditions/StateTreeVectorDistanceConditions.h"
 
-#include "StateTreeExecutionContext.h"
-#include "StateTreeNodeDescriptionHelpers.h"
+#include <StateTreeExecutionContext.h>
+#include <StateTreeNodeDescriptionHelpers.h>
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(StateTreeVectorDistanceConditions)
 

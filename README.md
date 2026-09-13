@@ -26,5 +26,7 @@ Keep in mind all features are related to state trees.
     - Has Any Tags
     - Has All Tags
     - Matches Query
+  - Components
+    - Get Component Location
 - Conditions
   - Distance Compare: FVector2D, FIntVector & FIntPoint. (FVector already supported by the engine)
