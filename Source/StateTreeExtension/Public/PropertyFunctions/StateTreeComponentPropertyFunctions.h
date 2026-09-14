@@ -21,7 +21,7 @@ struct FStateTreeGetComponentLocationPropertyFunctionInstanceData
 /**
  * Get the world location of a scene component.
  */
-USTRUCT(meta = (DisplayName = "Get Component Location", Category = "Transform|Component"))
+USTRUCT(meta = (DisplayName = "Get Component Location", Category = "Component"))
 struct FStateTreeGetComponentLocationPropertyFunction : public FStateTreePropertyFunctionCommonBase
 {
 	GENERATED_BODY()
