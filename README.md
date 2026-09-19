@@ -30,3 +30,6 @@ Keep in mind all features are related to state trees.
     - Get Component Location
 - Conditions
   - Distance Compare: FVector2D, FIntVector & FIntPoint. (FVector already supported by the engine)
+    ![Distance Compare](Docs/Assets/DistanceCompare.png)
+  - Flag Compare: check if a flag enum value matches another (Exactly, Any or All)
+    ![Flag Compare](Docs/Assets/FlagCompare.png)
