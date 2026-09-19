@@ -1,5 +1,7 @@
 // Copyright 2015-2026 Piperift. All Rights Reserved.
 
+#include <StateTreeNodeDescriptionHelpers.h>
+
 #include "PropertyFunctions/StateTreeVectorPropertyFunctions.h"
 
 #include "PropertyFunctions/StateTreePropertyFunctionHelpers.h"

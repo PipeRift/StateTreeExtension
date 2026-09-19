@@ -57,4 +57,5 @@ namespace UE::StateTree::DescHelpers
 #endif	  // WITH_EDITOR
 }	 // namespace UE::StateTree::DescHelpers
 
+// Include after for GetText to be available to helpers
 #include <StateTreeNodeDescriptionHelpers.h>

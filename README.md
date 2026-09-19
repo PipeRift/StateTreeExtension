@@ -28,6 +28,13 @@ Keep in mind all features are related to state trees.
     - Matches Query
   - Components
     - Get Component Location
+  - Enums
+    - Has Any: check if the left enum mask has any of the right flags
+      ![Has Any](Docs/Assets/EnumHasAnyFunction.png)
+    - Has All: check if the left enum mask has all of the right flags
+      ![Has All](Docs/Assets/EnumHasAllFunction.png)
+    - Equals: check if the left enum equals the right
+      ![Equals](Docs/Assets/EnumEqualsFunction.png)
 - Conditions
   - Distance Compare: FVector2D, FIntVector & FIntPoint. (FVector already supported by the engine)
     ![Distance Compare](Docs/Assets/DistanceCompare.png)
