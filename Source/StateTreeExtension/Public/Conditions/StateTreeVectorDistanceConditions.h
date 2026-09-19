@@ -60,7 +60,7 @@ struct FStateTreeCompareVector2DDistanceCondition : public FStateTreeConditionCo
 	bool bInvert = false;
 
 	UPROPERTY(EditAnywhere, Category = "Condition", meta = (InvalidEnumValues = "IsTrue"))
-	EGenericAICheck Operator = EGenericAICheck::Equal;
+	EGenericAICheck Operator = EGenericAICheck::LessOrEqual;
 };
 
 
@@ -114,7 +114,7 @@ struct FStateTreeCompareIntVectorDistanceCondition : public FStateTreeConditionC
 	bool bInvert = false;
 
 	UPROPERTY(EditAnywhere, Category = "Condition", meta = (InvalidEnumValues = "IsTrue"))
-	EGenericAICheck Operator = EGenericAICheck::Equal;
+	EGenericAICheck Operator = EGenericAICheck::LessOrEqual;
 };
 
 
@@ -168,5 +168,5 @@ struct FStateTreeCompareIntPointDistanceCondition : public FStateTreeConditionCo
 	bool bInvert = false;
 
 	UPROPERTY(EditAnywhere, Category = "Condition", meta = (InvalidEnumValues = "IsTrue"))
-	EGenericAICheck Operator = EGenericAICheck::Equal;
+	EGenericAICheck Operator = EGenericAICheck::LessOrEqual;
 };
