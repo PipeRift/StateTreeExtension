@@ -24,7 +24,8 @@ struct FStateTreeCompareVector2DDistanceConditionInstanceData
 	UPROPERTY(EditAnywhere, Category = "Parameter")
 	double Distance = 0.0;
 };
-STATETREE_POD_INSTANCEDATA(FStateTreeCompareVector2DDistanceConditionInstanceData);
+UE_STATETREE_ZEROED_TRIVIALLY_COPIED_NO_DESTRUCTOR_INSTANCEDATA(
+	FStateTreeCompareVector2DDistanceConditionInstanceData);
 
 /**
  * Condition comparing distance between two Vector2D by a tolerance distance.
@@ -37,8 +38,8 @@ struct FStateTreeCompareVector2DDistanceCondition : public FStateTreeConditionCo
 	using FInstanceDataType = FStateTreeCompareVector2DDistanceConditionInstanceData;
 
 	FStateTreeCompareVector2DDistanceCondition() = default;
-	explicit FStateTreeCompareVector2DDistanceCondition(
-		const EGenericAICheck InOperator, const EStateTreeCompare InInverts = EStateTreeCompare::Default)
+	explicit FStateTreeCompareVector2DDistanceCondition(const UE::StateTree::EComparisonOperator InOperator,
+		const EStateTreeCompare InInverts = EStateTreeCompare::Default)
 		: bInvert(InInverts == EStateTreeCompare::Invert)
 		, Operator(InOperator)
 	{}
@@ -60,7 +61,7 @@ struct FStateTreeCompareVector2DDistanceCondition : public FStateTreeConditionCo
 	bool bInvert = false;
 
 	UPROPERTY(EditAnywhere, Category = "Condition", meta = (InvalidEnumValues = "IsTrue"))
-	EGenericAICheck Operator = EGenericAICheck::LessOrEqual;
+	UE::StateTree::EComparisonOperator Operator = UE::StateTree::EComparisonOperator::LessOrEqual;
 };
 
 
@@ -78,7 +79,8 @@ struct FStateTreeCompareIntVectorDistanceConditionInstanceData
 	UPROPERTY(EditAnywhere, Category = "Parameter")
 	double Distance = 0.0;
 };
-STATETREE_POD_INSTANCEDATA(FStateTreeCompareIntVectorDistanceConditionInstanceData);
+UE_STATETREE_ZEROED_TRIVIALLY_COPIED_NO_DESTRUCTOR_INSTANCEDATA(
+	FStateTreeCompareIntVectorDistanceConditionInstanceData);
 
 /**
  * Condition comparing distance between two IntVector by a tolerance distance.
@@ -91,8 +93,8 @@ struct FStateTreeCompareIntVectorDistanceCondition : public FStateTreeConditionC
 	using FInstanceDataType = FStateTreeCompareIntVectorDistanceConditionInstanceData;
 
 	FStateTreeCompareIntVectorDistanceCondition() = default;
-	explicit FStateTreeCompareIntVectorDistanceCondition(
-		const EGenericAICheck InOperator, const EStateTreeCompare InInverts = EStateTreeCompare::Default)
+	explicit FStateTreeCompareIntVectorDistanceCondition(const UE::StateTree::EComparisonOperator InOperator,
+		const EStateTreeCompare InInverts = EStateTreeCompare::Default)
 		: bInvert(InInverts == EStateTreeCompare::Invert)
 		, Operator(InOperator)
 	{}
@@ -114,7 +116,7 @@ struct FStateTreeCompareIntVectorDistanceCondition : public FStateTreeConditionC
 	bool bInvert = false;
 
 	UPROPERTY(EditAnywhere, Category = "Condition", meta = (InvalidEnumValues = "IsTrue"))
-	EGenericAICheck Operator = EGenericAICheck::LessOrEqual;
+	UE::StateTree::EComparisonOperator Operator = UE::StateTree::EComparisonOperator::LessOrEqual;
 };
 
 
@@ -132,7 +134,8 @@ struct FStateTreeCompareIntPointDistanceConditionInstanceData
 	UPROPERTY(EditAnywhere, Category = "Parameter")
 	double Distance = 0.0;
 };
-STATETREE_POD_INSTANCEDATA(FStateTreeCompareIntPointDistanceConditionInstanceData);
+UE_STATETREE_ZEROED_TRIVIALLY_COPIED_NO_DESTRUCTOR_INSTANCEDATA(
+	FStateTreeCompareIntPointDistanceConditionInstanceData);
 
 /**
  * Condition comparing distance between two IntPoint by a tolerance distance.
@@ -145,8 +148,8 @@ struct FStateTreeCompareIntPointDistanceCondition : public FStateTreeConditionCo
 	using FInstanceDataType = FStateTreeCompareIntPointDistanceConditionInstanceData;
 
 	FStateTreeCompareIntPointDistanceCondition() = default;
-	explicit FStateTreeCompareIntPointDistanceCondition(
-		const EGenericAICheck InOperator, const EStateTreeCompare InInverts = EStateTreeCompare::Default)
+	explicit FStateTreeCompareIntPointDistanceCondition(const UE::StateTree::EComparisonOperator InOperator,
+		const EStateTreeCompare InInverts = EStateTreeCompare::Default)
 		: bInvert(InInverts == EStateTreeCompare::Invert)
 		, Operator(InOperator)
 	{}
@@ -168,5 +171,5 @@ struct FStateTreeCompareIntPointDistanceCondition : public FStateTreeConditionCo
 	bool bInvert = false;
 
 	UPROPERTY(EditAnywhere, Category = "Condition", meta = (InvalidEnumValues = "IsTrue"))
-	EGenericAICheck Operator = EGenericAICheck::LessOrEqual;
+	UE::StateTree::EComparisonOperator Operator = UE::StateTree::EComparisonOperator::LessOrEqual;
 };

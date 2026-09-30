@@ -30,7 +30,7 @@ struct FStateTreeFlagCompareConditionInstanceData
 	UPROPERTY(EditAnywhere, Category = "Parameter")
 	FStateTreeAnyEnum Right;
 };
-STATETREE_POD_INSTANCEDATA(FStateTreeFlagCompareConditionInstanceData);
+UE_STATETREE_ZEROED_TRIVIALLY_COPIED_NO_DESTRUCTOR_INSTANCEDATA(FStateTreeFlagCompareConditionInstanceData);
 
 /**
  * Condition comparing two enum flags.

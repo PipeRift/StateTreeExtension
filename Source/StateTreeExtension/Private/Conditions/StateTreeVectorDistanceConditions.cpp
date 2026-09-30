@@ -2,38 +2,13 @@
 
 #include "Conditions/StateTreeVectorDistanceConditions.h"
 
+#include <Conditions/StateTreeConditionHelpers.h>
 #include <StateTreeExecutionContext.h>
 #include <StateTreeNodeDescriptionHelpers.h>
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(StateTreeVectorDistanceConditions)
 
 #define LOCTEXT_NAMESPACE "StateTreeVectorDistanceConditions"
-
-namespace
-{
-	template <typename T>
-	bool CompareNumbers(const T Left, const T Right, const EGenericAICheck Operator)
-	{
-		switch (Operator)
-		{
-			case EGenericAICheck::Equal:
-				return Left == Right;
-			case EGenericAICheck::NotEqual:
-				return Left != Right;
-			case EGenericAICheck::Less:
-				return Left < Right;
-			case EGenericAICheck::LessOrEqual:
-				return Left <= Right;
-			case EGenericAICheck::Greater:
-				return Left > Right;
-			case EGenericAICheck::GreaterOrEqual:
-				return Left >= Right;
-			default:
-				ensureMsgf(false, TEXT("Unhandled operator %d"), int32(Operator));
-				return false;
-		}
-	}
-}	 // namespace
 
 
 bool FStateTreeCompareVector2DDistanceCondition::TestCondition(FStateTreeExecutionContext& Context) const
@@ -42,7 +17,7 @@ bool FStateTreeCompareVector2DDistanceCondition::TestCondition(FStateTreeExecuti
 
 	const double Left = FVector2D::DistSquared(InstanceData.Source, InstanceData.Target);
 	const double Right = FMath::Square(InstanceData.Distance);
-	const bool bResult = CompareNumbers(Left, Right, Operator);
+	const bool bResult = UE::StateTree::Conditions::CompareNumbers(Left, Right, Operator);
 
 	SET_NODE_CUSTOM_TRACE_TEXT(Context, Override, TEXT("%sDistance %s %s %s (from [%s] to [%s])"),
 		*UE::StateTree::DescHelpers::GetInvertText(bInvert, EStateTreeNodeFormatting::Text).ToString(),
@@ -62,7 +37,7 @@ bool FStateTreeCompareIntVectorDistanceCondition::TestCondition(FStateTreeExecut
 						FMath::Square(InstanceData.Source.Y - InstanceData.Target.Y) +
 						FMath::Square(InstanceData.Source.Z - InstanceData.Target.Z);
 	const double Right = FMath::Square(InstanceData.Distance);
-	const bool bResult = CompareNumbers(Left, Right, Operator);
+	const bool bResult = UE::StateTree::Conditions::CompareNumbers(Left, Right, Operator);
 
 	SET_NODE_CUSTOM_TRACE_TEXT(Context, Override, TEXT("%sDistance %s %s %s (from [%s] to [%s])"),
 		*UE::StateTree::DescHelpers::GetInvertText(bInvert, EStateTreeNodeFormatting::Text).ToString(),
@@ -81,7 +56,7 @@ bool FStateTreeCompareIntPointDistanceCondition::TestCondition(FStateTreeExecuti
 	const double Left = FMath::Square(InstanceData.Source.X - InstanceData.Target.X) +
 						FMath::Square(InstanceData.Source.Y - InstanceData.Target.Y);
 	const double Right = FMath::Square(InstanceData.Distance);
-	const bool bResult = CompareNumbers(Left, Right, Operator);
+	const bool bResult = UE::StateTree::Conditions::CompareNumbers(Left, Right, Operator);
 
 	SET_NODE_CUSTOM_TRACE_TEXT(Context, Override, TEXT("%sDistance %s %s %s (from [%s] to [%s])"),
 		*UE::StateTree::DescHelpers::GetInvertText(bInvert, EStateTreeNodeFormatting::Text).ToString(),
